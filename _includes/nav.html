@@ -3,13 +3,14 @@
         <a class="site-logo" href="{{ site.baseurl }}/">
             <img src="/images/logo-full.svg" title="{{ site.title | strip_newlines }}">
         </a>
-        {% for my_page in site.pages %}
-            {% if my_page.title %}
-                <a class="site-link{% if page == my_page %} active{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">
-                    {{ my_page.title }}
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for sub_page in sorted_pages %}
+            {% if sub_page.title %}
+                <a class="site-link{% if page == sub_page %} active{% endif %}" href="{{ sub_page.url | prepend: site.baseurl }}">
+                    {{ sub_page.title }}
                 </a>
             {% endif %}
         {% endfor %}
-    </div>
+    </nav>
 </header>
 
