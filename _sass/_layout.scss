@@ -31,3 +31,37 @@ nav {
         &.active::after, &:hover::after { transform: scaleX(1); }
     }
 }
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    > * { flex: 1; }
+    min-height: 400px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+@include media-query-up($media-xs) {
+    .container { width: 540px; }
+}
+
+@include media-query-up($media-sm) {
+    .jumbotron { min-height: 533px; }
+    .container { width: 500px; }
+}
+
+@include media-query-up($media-md) {
+    .jumbotron { min-height: 600px; }
+    .container { width: 960px; }
+}
+
+@include media-query-up($media-lg) {
+    .jumbotron { min-height: 700px; }
+    .container { width: 1140px; }
+}

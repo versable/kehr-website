@@ -1,10 +1,86 @@
+html {
+    font-size: $base-font-size;
+}
+
 html, body {
     font-family: $base-font-family;
-    font-size: $base-font-size;
     font-weight: $base-font-weight;
     line-height: $base-line-height;
 }
 
+@include media-query-down($media-md) {
+    html { font-size: 14px; }
+}
+
+@include media-query-down($media-sm) {
+    html { font-size: 12px; }
+}
+
+@include media-query-down($media-xs) {
+    html { font-size: 10px; }
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 8px 30px;
+    transition: all 0.3s ease-in-out;
+
+    &.btn-default {
+        color: $color-secondary-1-1;
+        &:hover {
+            color: $color-secondary-1-0;
+            background-color: #fff;
+            border-color: #fff;
+        }
+    }
+
+    &.btn-white {
+        color: #fff;
+        &:hover {
+            color: $color-secondary-1-0;
+            background-color: #fff;
+            border-color: #fff;
+        }
+    }
+}
+
 small {
     font-size: $small-font-size;
+}
+
+.hero-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: center / cover no-repeat url('/images/hero-1.jpg');
+    color: #fff;
+    z-index: 1;
+
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.8rem;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, $color-complement-0 0%, $color-complement-1 100%);
+        opacity: 0.5;
+        z-index: 2;
+    }
+
+    > * {
+        z-index: 3;
+    }
 }
