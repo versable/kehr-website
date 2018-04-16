@@ -1,12 +1,27 @@
 <header>
     <nav>
-        <a class="site-logo" href="{{ site.baseurl }}/">
+        <a class="nav-logo" href="{{ site.baseurl }}/">
             <img src="/images/logo-full.svg" title="{{ site.title | strip_newlines }}">
         </a>
+        <div id="nav" class="nav-menu">
+            <a class="open" href="#nav">
+                <svg height="20" width="30" viewBox="0 0 18 15">
+                    <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                    <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                    <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                </svg>
+            </a>
+            <a class="close" href="#">
+                <svg height="20" width="30" viewBox="0 0 18 15">
+                    <path fill="#424242" d="m15.4 1.15c0.579 0.579 0.579 1.52 0 2.1l-10.7 10.6c-0.579 0.579-1.52 0.579-2.1 0-0.58-0.58-0.579-1.52 0-2.1l10.7-10.6c0.579-0.581 1.52-0.581 2.1-0.000707z"/>
+                    <path fill="#424242" d="m15.4 13.9c-0.579 0.579-1.52 0.579-2.1 0l-10.7-10.6c-0.579-0.579-0.579-1.52 0-2.1 0.58-0.58 1.52-0.579 2.1 0l10.7 10.6c0.581 0.579 0.581 1.52 0.000707 2.1z"/>
+                </svg>
+            </a>
+        </div>
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for sub_page in sorted_pages %}
             {% if sub_page.title %}
-                <a class="site-link{% if page == sub_page %} active{% endif %}" href="{{ sub_page.url | prepend: site.baseurl }}">
+                <a class="nav-link{% if page == sub_page %} active{% endif %}" href="{{ sub_page.url | prepend: site.baseurl }}">
                     {{ sub_page.title }}
                 </a>
             {% endif %}

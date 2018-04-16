@@ -1,16 +1,25 @@
 nav {
     display: flex;
-    height: 100px;
+    min-height: 100px;
     align-items: center;
     justify-content: center;
     padding: 0 50px;
     border-bottom: 1px solid #eee;
 
-    .site-logo {
+    .nav-logo {
         margin-right: auto;
+
+        img {
+            width: 180px;
+            height: 40px;
+        }
     }
 
-    .site-link {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-link {
         padding: 0 20px;
         color: #000;
         font-size: 1.35rem;
@@ -29,6 +38,53 @@ nav {
         }
 
         &.active::after, &:hover::after { transform: scaleX(1); }
+    }
+}
+
+@include media-query-down($media-md) {
+    nav {
+        flex-flow: row wrap;
+        padding: 0 10px;
+        min-height: 50px;
+
+        .nav-logo {
+            flex: 1;
+            margin-right: 0;
+            img {
+                width: 135px;
+                height: 30px;
+            }
+        }
+
+        .nav-menu {
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 20px;
+            padding: 10px;
+
+            svg {
+                position: absolute;
+                top: 10px;
+                left: 15px;
+            }
+
+            .close {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        .nav-link {
+            flex: 2 100%;
+            display: none;
+            font-size: 20px;
+        }
+    }
+
+    &:target {
+        display: none;
+        background-color: pink;
     }
 }
 
