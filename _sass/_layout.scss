@@ -15,9 +15,7 @@ nav {
         }
     }
 
-    .nav-menu {
-        display: none;
-    }
+    #nav-menu, .nav-menu { display: none; }
 
     .nav-link {
         padding: 0 20px;
@@ -95,8 +93,6 @@ nav {
         }
 
         #nav-menu {
-            display: none;
-
             &:checked ~ .nav-menu {
                 transform: translate3d(-10px, 10px, 0) rotate(45deg);
 
