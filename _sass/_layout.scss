@@ -41,11 +41,20 @@ nav {
 }
 
 @include media-query-down($media-md) {
+    body {
+        padding-top: 50px;;
+    }
+
     nav {
+        position: fixed;
+        top: 0;
+        background-color: #fff;
         flex-flow: row wrap;
         padding: 0 10px;
         min-height: 50px;
-        overflow: hidden;
+        max-height: 100vh;
+        overflow: auto;
+        z-index: 4;
 
         .nav-logo {
             flex: auto;
@@ -69,7 +78,7 @@ nav {
                 display: block;
                 width: 30px;
                 height: 3px;
-                transition: all 0.5s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 border-radius: 4px;
                 background-color: #333;
 
@@ -80,7 +89,7 @@ nav {
                     display: block;
                     width: 30px;
                     height: 3px;
-                    transition: all 0.5s ease-in-out;
+                    transition: all 0.2s ease-in-out;
                     border-radius: 4px;
                     background-color: #333;
                 }
@@ -97,7 +106,6 @@ nav {
 
         #nav-menu {
             &:checked ~ .nav-menu {
-
                 span {
                     background-color: #fff;
                     &::before {
@@ -122,6 +130,7 @@ nav {
             max-height: 0;
             font-size: 20px;
             padding: 0 20px;
+            overflow: hidden;
             transition: all 0.5s ease-in-out;
         }
     }
