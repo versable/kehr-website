@@ -82,6 +82,7 @@ small {
 .features {
     display: flex;
     justify-content: space-between;
+    text-align: center;
 
     > article {
         padding: 20px;
@@ -94,7 +95,7 @@ small {
 
         > h1 {
             font-size: 1.8rem;
-            color: $color-secondary-1-1;
+            color: $color-secondary-1-2;
         }
 
         > p {
@@ -114,7 +115,6 @@ small {
     #hero-1 { background-image: url('/images/hero-1-md.jpg'); }
     .features {
         flex-direction: column;
-        text-align: center;
 
         > article {
             font-size: 16px;
