@@ -45,7 +45,7 @@ small {
     height: auto;
 }
 
-.hero-1 {
+#hero-1 {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -53,6 +53,7 @@ small {
     background: center / cover no-repeat url('/images/hero-1.jpg');
     color: #fff;
     z-index: 1;
+    animation: 1.5s ease-out 0s 1 heroFadeIn;
 
     h1 {
         font-size: 3rem;
