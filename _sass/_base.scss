@@ -97,7 +97,7 @@ small {
         }
 
         > p {
-            min-height: 120px;
+            min-height: 100px;
         }
 
         > button { align-self: flex-end; }
@@ -105,12 +105,12 @@ small {
 }
 
 @include media-query-down($media-lg) {
-    .hero-1 { background-image: url('/images/hero-1-lg.jpg'); }
+    #hero-1 { background-image: url('/images/hero-1-lg.jpg'); }
 }
 
 @include media-query-down($media-md) {
     html { font-size: 14px; }
-    .hero-1 { background-image: url('/images/hero-1-md.jpg'); }
+    #hero-1 { background-image: url('/images/hero-1-md.jpg'); }
     .features {
         flex-direction: column;
         text-align: center;
@@ -128,5 +128,5 @@ small {
 
 @include media-query-down($media-sm) {
     html { font-size: 12px; }
-    .hero-1 { background-image: url('/images/hero-1-sm.jpg'); }
+    #hero-1 { background-image: url('/images/hero-1-sm.jpg'); }
 }
