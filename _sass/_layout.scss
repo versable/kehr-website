@@ -32,6 +32,14 @@ nav {
 
         &.active::after, &:hover::after { transform: scaleX(1); }
     }
+
+    .social {
+        img {
+            height: 30px;
+            width: auto;
+            padding: 20px;
+        }
+    }
 }
 
 @include media-query-down($media-md) {
@@ -65,6 +73,7 @@ nav {
             width: 40px;
             height: 24px;
             cursor: pointer;
+            margin-top: 15px;
 
             span {
                 position: absolute;
@@ -157,7 +166,12 @@ nav {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        padding: 20px;
+        padding: 20px 0;
+
+        > * {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
 
         &:after {
             content: "";
@@ -168,6 +182,15 @@ nav {
             right: 0;
             background-color: rgba(0, 63, 33, 0.8);
             z-index: -1;
+        }
+    }
+}
+@include media-query-down($media-lg) {
+    .layer {
+        flex-direction: column;
+
+        div {
+            width: 100%;
         }
     }
 }
