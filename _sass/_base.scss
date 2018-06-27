@@ -34,7 +34,7 @@ dl {
 
 dt {
     float: left;
-    width: 160px;
+    width: 12em;
     overflow: hidden;
     clear: left;
     text-overflow: ellipsis;
@@ -42,7 +42,7 @@ dt {
 }
 
 dd {
-    margin-left: 180px;
+    margin-left: 12em;
 }
 
 .img-responsive {
@@ -55,22 +55,21 @@ dd {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     text-shadow: 0 0 8px #000;
-    background: center / cover no-repeat url('/images/hero-1.jpg');
+    background: top / contain no-repeat url('/images/hero-1.jpg');
     color: #fff;
     z-index: 1;
     animation: 1s ease-out 0s 1 heroFadeIn;
+    background-attachment: fixed;
 
-    .logo img {
+    .logo {
         width: 300px;
-        height: auto;
-        /*border: 1px solid #aaa;
-        border-radius: 50%;
-        background-color: rgba(255,255,255,0.5);*/
         padding: 10px;
         margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     h1 {
