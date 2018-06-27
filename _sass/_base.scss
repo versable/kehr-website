@@ -58,11 +58,10 @@ dd {
     justify-content: center;
     text-align: center;
     text-shadow: 0 0 8px #000;
-    background: top / contain no-repeat url('/images/hero-1.jpg');
+    background: url('/images/hero-1.jpg') center / cover no-repeat fixed;
     color: #fff;
     z-index: 1;
     animation: 1s ease-out 0s 1 heroFadeIn;
-    background-attachment: fixed;
 
     .logo {
         width: 300px;
@@ -92,7 +91,12 @@ dd {
 
 @include media-query-down($media-md) {
     html { font-size: 14px; }
-    #hero-1 { background-image: url('/images/hero-1-md.jpg'); }
+    #hero-1 {
+        background-image: url('/images/hero-1-md.jpg');
+        .logo {
+            width: 200px;
+        }
+    }
 }
 
 @include media-query-down($media-sm) {
