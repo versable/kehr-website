@@ -150,7 +150,7 @@ nav {
     min-height: 400px;
 }
 
-.layer {
+.opening {
     display: flex;
     flex-direction: row;
     background-color: #003F21;
@@ -160,7 +160,7 @@ nav {
         width: 50%;
     }
 
-    .layer-content {
+    .content {
         position: relative;
         z-index: 1;
         background-size: cover;

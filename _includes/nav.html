@@ -2,14 +2,15 @@
     <nav>
         <input id="nav-menu" type="checkbox">
         <label class="nav-menu" for="nav-menu"><span></span></label>
-        {% assign sorted_pages = site.pages | sort:"order" %}
-        {% for sub_page in sorted_pages %}
-            {% if sub_page.title %}
-                <a class="nav-link{% if page == sub_page %} active{% endif %}" href="{{ sub_page.url | prepend: site.baseurl }}">
-                    {{ sub_page.title }}
-                </a>
-            {% endif %}
-        {% endfor %}
+        <a class="nav-link" href="#unser-biergarten">
+            Unser Biergartem
+        </a>
+        <a class="nav-link" href="#anfahrt-oeffnungszeiten">
+            Anfahrt & Öffnungszeiten
+        </a>
+        <a class="nav-link" href="#getraenkekarte">
+            Getränkekarte
+        </a>
     </nav>
 </header>
 

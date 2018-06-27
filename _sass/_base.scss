@@ -17,32 +17,10 @@ html, body {
     line-height: $base-line-height;
 }
 
-.btn {
-    background-color: transparent;
-    border: 2px solid;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: 900;
-    padding: 8px 30px;
-    transition: all 0.3s ease-in-out;
-
-    &.btn-default {
-        color: $color-secondary-1-2;
-        &:hover {
-            color: #fff;
-            background-color: $color-secondary-1-2;
-            border-color: $color-secondary-1-2;
-        }
-    }
-
-    &.btn-white {
-        color: #fff;
-        &:hover {
-            color: $color-secondary-1-0;
-            background-color: #fff;
-            border-color: #fff;
-        }
-    }
+h1 {
+    padding-top: 90px;
+    margin-top: -90px;
+    pointer-events: none;
 }
 
 small {
