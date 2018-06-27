@@ -50,7 +50,6 @@ nav {
     nav {
         position: fixed;
         top: 0;
-        background-color: #fff;
         flex-flow: row wrap;
         padding: 0 10px;
         min-height: 50px;
@@ -185,8 +184,26 @@ nav {
         }
     }
 }
-@include media-query-down($media-lg) {
-    .layer {
+
+.drinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    table {
+        width: 250px;
+        margin-top: 30px;
+        text-align: left;
+        tr {
+            &.spacer { border-top: 15px solid transparent; }
+            th { border-top: 7.5px solid transparent; border-bottom: 7.5px solid transparent; }
+            th, td { padding-left: 10px; }
+        }
+    }
+}
+
+@include media-query-down($media-sm) {
+    .opening, .drinks {
         flex-direction: column;
 
         div {
@@ -204,12 +221,12 @@ nav {
 }
 
 @include media-query-up($media-xs) {
-    .container { width: 540px; }
+    .container { width: 600px; }
 }
 
 @include media-query-up($media-sm) {
     .jumbotron { min-height: 533px; }
-    .container { width: 500px; }
+    .container { width: 700px; }
 }
 
 @include media-query-up($media-md) {
