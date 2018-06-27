@@ -288,8 +288,12 @@ nav {
     background-color: #003F21;
     color: #fff;
 
-    div {
+    > div {
         width: 50%;
+    }
+
+    .map > iframe {
+        height: 100%;
     }
 
     .content {
