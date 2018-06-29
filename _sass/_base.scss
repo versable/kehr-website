@@ -383,6 +383,17 @@ nav {
     max-width: 100%;
 }
 
+footer {
+    text-align: right;
+    padding: 20px;
+    background-color: #333;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+}
+
 @include media-query-up($media-xs) {
     .container { width: 540px; }
 }
