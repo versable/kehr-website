@@ -285,7 +285,7 @@ nav {
 .opening {
     display: flex;
     flex-direction: row;
-    background-color: #003F21;
+    background-color: $color-primary-4;
     color: #fff;
 
     > div {
@@ -299,7 +299,7 @@ nav {
     .content {
         position: relative;
         z-index: 1;
-        background: url(images/kehr14.jpg) center / cover fixed;
+        background: url("/images/kehr14.jpg") center / cover fixed;
         padding: 20px 0;
 
         > * {
@@ -327,6 +327,8 @@ nav {
     table {
         width: 250px;
         margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: left;
         tr {
             &.spacer { border-top: 15px solid transparent; }
@@ -336,8 +338,35 @@ nav {
     }
 }
 
+.reserve {
+    display: flex;
+    flex-direction: row;
+    background-color: $color-secondary-2-1;
+    height: 500px;;
+    color: #fff;
+
+    > div {
+        height: 500px;;
+        width: 50%;
+    }
+
+    .image {
+        background-image: url("/images/reserviert.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 @include media-query-down($media-sm) {
-    .opening, .drinks {
+    .opening, .drinks, .reserve {
         flex-direction: column;
 
         div {
