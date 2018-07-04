@@ -100,8 +100,11 @@ dd {
 }
 
 @include media-query-down($media-sm) {
-    html { font-size: 12px; }
     #hero-1 { background-image: url('/images/hero-1-sm.jpg'); }
+}
+
+@include media-query-down($media-xs) {
+    #hero-1 { background-image: url('/images/hero-1-xs.jpg'); }
 }
 
 .thumbs {
