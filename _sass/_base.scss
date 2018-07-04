@@ -106,11 +106,7 @@ dd {
 
 .thumbs {
     text-align: center;
-    img {
-        width: 250px;
-        height: 190px;
-        padding: 10px;
-    }
+    img { padding: 10px; }
 }
 
 .section {
@@ -125,7 +121,6 @@ nav {
     z-index: 4;
     width: 100%;
     display: flex;
-    align-items: start;
     justify-content: center;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.9);
@@ -292,14 +287,17 @@ nav {
         width: 50%;
     }
 
-    .map > iframe {
+    .map > .osm {
+        display: block;
+        min-height: 150px;
         height: 100%;
+        background: url("/images/map.jpg") center/cover;
     }
 
     .content {
         position: relative;
         z-index: 1;
-        background: url("/images/kehr14.jpg") center / cover fixed;
+        background: url("/images/front.jpg") center / cover fixed;
         padding: 20px 0;
 
         > * {
@@ -325,7 +323,7 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     table {
-        width: 250px;
+        width: 300px;
         margin-top: 30px;
         margin-left: auto;
         margin-right: auto;
