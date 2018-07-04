@@ -5,7 +5,7 @@ title: >
 email:
 description: >
 
-baseurl: ""
+  baseurl: "https://goettinger-biergarten.de"
 
 # Build settings
 markdown: kramdown
