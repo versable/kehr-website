@@ -17,14 +17,13 @@ html, body {
     line-height: $base-line-height;
 }
 
-h1 {
-    padding-top: 90px;
-    margin-top: -90px;
-    pointer-events: none;
+body {
+    padding-top: 60px;
 }
 
 small {
-    font-size: $small-font-size;
+    display: block;
+    font-size: 0.5em;
 }
 
 dl {
@@ -51,24 +50,20 @@ dd {
     height: auto;
 }
 
-#hero-1 {
+.jumbotron {
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    text-shadow: 0 0 8px #000;
-    background: url('/images/hero-1.jpg') center / cover no-repeat fixed;
+    align-items: center;
+    background: url('/images/hero-1.jpg') center / cover no-repeat;
     color: #fff;
     z-index: 1;
-    animation: 1s ease-out 0s 1 heroFadeIn;
+    min-height: 450px;
 
     .logo {
-        width: 300px;
-        padding: 10px;
-        margin-top: 5px;
-        margin-left: auto;
-        margin-right: auto;
+        background: #fff;
+        border-radius: 50%;
+        padding: 45px 20px;
     }
 
     h1 {
@@ -82,29 +77,24 @@ dd {
 
     > * {
         z-index: 3;
+        margin: 20px;
     }
 }
 
 @include media-query-down($media-lg) {
-    #hero-1 { background-image: url('/images/hero-1-lg.jpg'); }
+    .jumbotron { background-image: url('/images/hero-1-lg.jpg'); }
 }
 
 @include media-query-down($media-md) {
-    html { font-size: 14px; }
-    #hero-1 {
-        background-image: url('/images/hero-1-md.jpg');
-        .logo {
-            width: 200px;
-        }
-    }
+    .jumbotron { background-image: url('/images/hero-1-md.jpg'); }
 }
 
 @include media-query-down($media-sm) {
-    #hero-1 { background-image: url('/images/hero-1-sm.jpg'); }
+    .jumbotron { background-image: url('/images/hero-1-sm.jpg'); }
 }
 
 @include media-query-down($media-xs) {
-    #hero-1 { background-image: url('/images/hero-1-xs.jpg'); }
+    .jumbotron { background-image: url('/images/hero-1-xs.jpg'); }
 }
 
 .thumbs {
@@ -123,20 +113,22 @@ nav {
     left: 0;
     z-index: 4;
     width: 100%;
+    height: 60px;
     display: flex;
     justify-content: center;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #fff;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
 
-    .nav-logo {
+    .logo {
         width: 130px;
         margin-top: 10px;
         margin-right: auto;
         text-align: center;
     }
-    #nav-menu, .nav-menu { display: none; }
+    #menu, .menu { display: none; }
 
-    .nav-link {
+    .link {
         padding: 20px 10px 0;
         color: #000;
         font-weight: 600;
@@ -156,7 +148,7 @@ nav {
         &.active::after, &:hover::after { transform: scaleX(1); }
     }
 
-    .nav-social {
+    .social {
         width: 130px;
         margin-left: auto;
         text-align: center;
@@ -184,7 +176,7 @@ nav {
         overflow: auto;
         z-index: 4;
 
-        .nav-menu {
+        .menu {
             order: 1;
             position: relative;
             display: inline-block;
@@ -226,8 +218,8 @@ nav {
             }
         }
 
-        #nav-menu {
-            &:checked ~ .nav-menu {
+        #menu {
+            &:checked ~ .menu {
                 span {
                     background-color: #fff;
                     &::before {
@@ -242,13 +234,13 @@ nav {
                 }
             }
 
-            &:checked ~ .nav-link {
+            &:checked ~ .link {
                 max-height: 50px;
                 padding: 10px 20px;
             }
         }
 
-        .nav-link {
+        .link {
             flex: 100%;
             order: 1;
             max-height: 0;
@@ -258,11 +250,11 @@ nav {
             transition: all 0.5s ease-in-out;
         }
 
-        .nav-social {
+        .social {
             display: none;
         }
 
-        .nav-logo {
+        .logo {
             width: 90px;
             margin-top: 3px;
         }
@@ -271,13 +263,6 @@ nav {
     .features > article > img {
         margin-bottom: 0;
     }
-}
-
-.jumbotron {
-    display: flex;
-    flex-direction: column;
-    > * { flex: 1; }
-    min-height: 400px;
 }
 
 .opening {
@@ -400,16 +385,13 @@ footer {
 }
 
 @include media-query-up($media-sm) {
-    .jumbotron { min-height: 533px; }
     .container { width: 700px; }
 }
 
 @include media-query-up($media-md) {
-    .jumbotron { min-height: 600px; }
     .container { width: 960px; }
 }
 
 @include media-query-up($media-lg) {
-    .jumbotron { min-height: 700px; }
     .container { width: 1140px; }
 }
