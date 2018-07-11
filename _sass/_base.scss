@@ -63,7 +63,7 @@ dd {
     .logo {
         background: #fff;
         border-radius: 50%;
-        padding: 45px 20px;
+        padding: 20px 5px;
     }
 
     h1 {
@@ -86,7 +86,12 @@ dd {
 }
 
 @include media-query-down($media-md) {
-    .jumbotron { background-image: url('/images/hero-1-md.jpg'); }
+    .jumbotron {
+        background-image: url('/images/hero-1-md.jpg');
+        flex-direction: column;
+        text-align: center;
+        h1 { font-size: 2.5rem }
+    }
 }
 
 @include media-query-down($media-sm) {
@@ -162,10 +167,6 @@ nav {
 }
 
 @include media-query-down($media-md) {
-    body {
-        padding-top: 50px;;
-    }
-
     nav {
         position: fixed;
         top: 0;
