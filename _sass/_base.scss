@@ -325,6 +325,20 @@ nav {
     }
 }
 
+.annotation {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 0.8em;
+    dt {
+        width: 3em;
+    }
+
+    dd {
+        margin-left: 3em;
+    }
+
+}
+
 .reserve {
     display: flex;
     flex-direction: row;
