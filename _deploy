@@ -1,0 +1,5 @@
+#!/bin/bash
+
+jekyll build
+yui-compressor _site/css/main.css -o _site/css/main.css
+rsync -aHP --delete _site/ versable@195.201.95.98:www
