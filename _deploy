@@ -2,4 +2,6 @@
 
 jekyll build
 yui-compressor _site/css/main.css -o _site/css/main.css
+find _site -iname "*.html" -exec \
+    tidy -i -q -w 0 -m --drop-empty-elements false '{}' \;
 rsync -aHP --delete _site/ versable@195.201.95.98:www
