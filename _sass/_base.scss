@@ -319,9 +319,19 @@ nav {
         margin-right: auto;
         text-align: left;
         tr {
-            &.spacer { border-top: 15px solid transparent; }
-            th { border-top: 7.5px solid transparent; border-bottom: 7.5px solid transparent; }
-            th, td { padding-left: 10px; }
+            &.spacer {
+                border-top: 15px solid transparent;
+            }
+            th {
+                border-top: 7.5px solid transparent;
+                border-bottom: 7.5px solid transparent;
+            }
+            th, td {
+                padding-left: 10px;
+                &:not(:first-child) {
+                    text-align: right;
+                }
+            }
         }
     }
 }
