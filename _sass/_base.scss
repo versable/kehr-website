@@ -310,6 +310,7 @@ nav {
 .drinks {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     table {
         width: 300px;
