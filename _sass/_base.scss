@@ -350,35 +350,9 @@ nav {
 
 }
 
-.reserve {
-    display: flex;
-    flex-direction: row;
-    background-color: $color-secondary-2-1;
-    height: 500px;;
-    color: #fff;
-
-    > div {
-        height: 500px;;
-        width: 50%;
-    }
-
-    .image {
-        background-image: url("/images/reserviert.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-}
 
 @include media-query-down($media-sm) {
-    .opening, .drinks, .reserve {
+    .opening, .drinks {
         flex-direction: column;
 
         div {
