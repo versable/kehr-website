@@ -5,3 +5,4 @@ yui-compressor _site/css/main.css -o _site/css/main.css
 find _site -iname "*.html" -exec \
     tidy -i -q -w 0 -m --tidy-mark false --drop-empty-elements false '{}' \;
 rsync -aHP --delete _site/ versable@195.201.95.98:www
+ssh versable@195.201.95.98 -- zfs snapshot zroot/usr/home/versable/www@`date -u +%Y-%m-%dT%H:%M:%SZ`
