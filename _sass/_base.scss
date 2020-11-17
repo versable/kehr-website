@@ -19,6 +19,7 @@ html, body {
 
 body {
     padding-top: 60px;
+    overflow: hidden;
 }
 
 small {
@@ -424,8 +425,4 @@ footer {
     height: auto;
     margin: auto;
     padding: 10px;
-}
-
-body {
-    overflow: none;
 }
