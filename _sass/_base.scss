@@ -10,7 +10,6 @@ html, body {
 
 body {
     padding-top: 60px;
-    overflow: hidden;
 }
 
 small {
@@ -386,34 +385,4 @@ footer {
 
 @include media-query-up($media-lg) {
     .container { width: 1140px; }
-}
-
-#corona {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background-color: #fff;
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-}
-
-#corona > div {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    padding: 10px;
-}
-
-
-#corona > div img {
-    display: block;
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    margin: auto;
-    padding: 10px;
 }
