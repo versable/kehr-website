@@ -316,9 +316,9 @@ nav {
 
 .drinks {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: baseline;
+
     table {
         width: 300px;
         margin-top: 30px;
