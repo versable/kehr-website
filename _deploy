@@ -1,8 +1,15 @@
 #!/bin/bash
+UNIX_TIMESTAMP=$(date +%s)
 
 jekyll build
-yui-compressor _site/css/main.css -o _site/css/main.css
+
+find _site -iname "*.css" -type f -exec yui-compressor '{}' -o '{}' \;
+find _site -iname "*.html" -type f \
+     -exec tidy -i -q -w 0 -m --tidy-mark false --drop-empty-elements false \
+     --warn-proprietary-attributes false '{}' \;
 find _site -iname "*.html" -exec \
-    tidy -i -q -w 0 -m --tidy-mark false --drop-empty-elements false '{}' \;
+    sed -i "s/--TIMESTAMP--/$UNIX_TIMESTAMP/g" '{}' \;
+
 rsync -aHP --delete _site/ versable@195.201.95.98:www
-ssh versable@195.201.95.98 -- zfs snapshot zroot/usr/home/versable/www@`date -u +%Y-%m-%dT%H:%M:%SZ`
+ssh versable@195.201.95.98 -- \
+    zfs snapshot zroot/usr/home/versable/www@`date -u +%Y-%m-%dT%H:%M:%SZ`
