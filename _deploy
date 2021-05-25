@@ -1,5 +1,5 @@
 #!/bin/bash
-UNIX_TIMESTAMP=$(date +%s)
+VERSION=$( git log -n 1 --pretty=format:"%h")
 
 jekyll build
 
@@ -8,7 +8,7 @@ find _site -iname "*.html" -type f \
      -exec tidy -i -q -w 0 -m --tidy-mark false --drop-empty-elements false \
      --warn-proprietary-attributes false '{}' \;
 find _site -iname "*.html" -exec \
-    sed -i "s/--TIMESTAMP--/$UNIX_TIMESTAMP/g" '{}' \;
+    sed -i "s/--VERSION--/$VERSION/g" '{}' \;
 
 rsync -aHP --delete _site/ versable@195.201.95.98:www
 ssh versable@195.201.95.98 -- \
