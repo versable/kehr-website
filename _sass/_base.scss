@@ -8,6 +8,13 @@ html, body {
     line-height: $base-line-height;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+
 body {
     padding-top: 60px;
 }
@@ -33,6 +40,16 @@ dt {
 
 dd {
     margin-left: 12em;
+}
+
+h2 {
+    position: relative;
+
+    > small[id] {
+        position: absolute;
+        top: -80px;
+        pointer-events: none;
+    }
 }
 
 .img-responsive {
