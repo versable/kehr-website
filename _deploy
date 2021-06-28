@@ -9,5 +9,7 @@ find _site -iname "*.html" -type f \
      --warn-proprietary-attributes false '{}' \;
 find _site -iname "*.html" -exec \
     sed -i "s/--VERSION--/$VERSION/g" '{}' \;
+find _site -iname "*.xml" -type f \
+     -exec tidy -xml -q -m --tidy-mark false '{}' \;
 
 rsync -aHP --delete _site/ root@195.201.95.98:/var/www/html
