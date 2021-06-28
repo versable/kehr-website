@@ -7,7 +7,7 @@ find _site -iname "*.css" -type f -exec yui-compressor '{}' -o '{}' \;
 find _site -iname "*.html" -type f \
      -exec tidy -i -q -w 0 -m --tidy-mark false --drop-empty-elements false \
      --warn-proprietary-attributes false '{}' \;
-find _site -iname "*.html" -exec \
+find _site -iname "*.html" -type f -exec \
     sed -i "s/--VERSION--/$VERSION/g" '{}' \;
 find _site -iname "*.xml" -type f \
      -exec tidy -xml -q -m --tidy-mark false '{}' \;
