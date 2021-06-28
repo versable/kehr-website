@@ -6,6 +6,11 @@ server {
 
     root /var/www/html;
 
+    error_page 404 /404.html;
+    location  /404.html {
+        internal;
+    }
+
     location / {
             # First attempt to serve request as file, then
             # as directory, then fall back to displaying a 404.
