@@ -132,9 +132,9 @@ nav {
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
 
     .logo {
-        width: 130px;
         margin-top: 10px;
         margin-right: auto;
+        margin-left: 10px;
         text-align: center;
     }
     .menu, .close { display: none; }
@@ -158,7 +158,7 @@ nav {
     }
 
     .social {
-        width: 130px;
+        margin-right: 10px;
         margin-left: auto;
         text-align: center;
 
