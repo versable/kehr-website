@@ -137,7 +137,7 @@ nav {
         margin-right: auto;
         text-align: center;
     }
-    #menu, .menu { display: none; }
+    .menu, .close { display: none; }
 
     .link {
         padding: 20px 10px 0;
@@ -155,8 +155,6 @@ nav {
             transform: scaleX(0);
             transition: transform 0.25s ease-in-out;
         }
-
-        &.active::after, &:hover::after { transform: scaleX(1); }
     }
 
     .social {
@@ -182,6 +180,16 @@ nav {
         max-height: 100vh;
         overflow: auto;
         z-index: 4;
+
+        .close {
+            display: inline-block;
+            position: absolute;
+            width: 40px;
+            height: 24px;
+            top: 20px;
+            right: 30px;
+            z-index: -1;
+        }
 
         .menu {
             order: 1;
@@ -223,10 +231,8 @@ nav {
                     top: 8px;
                 }
             }
-        }
 
-        #menu {
-            &:checked ~ .menu {
+            &:target {
                 span {
                     background-color: #fff;
                     &::before {
@@ -241,9 +247,13 @@ nav {
                 }
             }
 
-            &:checked ~ .link {
+            &:target ~ .link {
                 max-height: 50px;
                 padding: 10px 20px;
+            }
+
+            &:target ~ .close {
+                z-index: 1;
             }
         }
 
@@ -411,6 +421,10 @@ footer {
 
 @include media-query-up($media-md) {
     .container { width: 960px; }
+
+    nav .link {
+        &.active::after, &:hover::after { transform: scaleX(1); }
+    }
 }
 
 @include media-query-up($media-lg) {
