@@ -396,7 +396,7 @@ nav {
 
 @include media-query-down($media-sm) {
     .opening, .drinks {
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         div {
             width: 100%;
