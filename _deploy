@@ -12,4 +12,4 @@ find _site -iname "*.html" -type f -exec \
 find _site -iname "*.xml" -type f \
      -exec tidy -xml -q -m --tidy-mark false '{}' \;
 
-rsync -aHP --delete _site/ root@195.201.95.98:/var/www/html
+rsync -aHP --delete _site/ root@goettinger-biergarten.de:/var/www/html
