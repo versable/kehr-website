@@ -30,8 +30,6 @@ server {
     server_name www.goettinger-biergarten.de;
 
     include ssl.conf;
-
-    server_name _;
     return 301 https://goettinger-biergarten.de$request_uri;
 }
 
