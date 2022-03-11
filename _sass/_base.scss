@@ -308,6 +308,7 @@ nav {
     &.top {
         color: #ffd500;
         background-color: #005bbc;
+        text-align: center;
     }
 
     &.bottom {
@@ -317,6 +318,30 @@ nav {
         h2 {
             text-align: left;
         }
+    }
+
+    ul.tiles {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    ul.tiles li {
+        flex: 0 0 50%;
+        text-align: center;
+        color: #fff;
+    }
+
+    ul.tiles span {
+        display: block;
+        font-size: 2rem;
+    }
+
+    ul.tiles,
+    ul.tiles li {
+        margin: 0;
+        padding: 0;
+        text-indent: 0;
+        list-style-type: none;
     }
 }
 
