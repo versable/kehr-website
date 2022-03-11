@@ -288,14 +288,31 @@ nav {
     }
 }
 
-.reopening {
-    background-color: #2b8057;
-    color: #fff;
-    margin-top: -21px;
+.ukraine {
     padding: 20px 0;
 
-    h2 {
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #005bbc;
+    }
+
+    h1, h2 {
         text-align: center;
+    }
+
+    &.top {
+        color: #ffd500;
+        background-color: #005bbc;
+    }
+
+    &.bottom {
+        color: #005bbc;
+        background-color: #ffd500;
+
+        h2 {
+            text-align: left;
+        }
     }
 }
 
