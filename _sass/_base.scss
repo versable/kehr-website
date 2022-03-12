@@ -225,7 +225,7 @@ nav {
 
                 &::after,
                 &::before {
-                    content: "";
+                    content: '';
                     position: absolute;
                     display: block;
                     width: 25px;
@@ -295,6 +295,14 @@ nav {
         text-decoration: none;
         font-weight: 600;
         color: #005bbc;
+    }
+
+    figure {
+        margin: 20px 0;
+    }
+
+    figure img {
+        max-width: 100%;
     }
 
     i::before {
