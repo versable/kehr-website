@@ -338,6 +338,7 @@ nav {
     ul.tiles {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     ul.tiles li {
