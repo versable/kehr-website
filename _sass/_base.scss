@@ -90,6 +90,10 @@ h2[id] {
     }
 }
 
+.festival {
+    display: inline-block;
+}
+
 @include media-query-down($media-lg) {
     .jumbotron { background-image: url('/images/hero-1-lg.jpg'); }
 }
