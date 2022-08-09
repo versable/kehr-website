@@ -12,6 +12,6 @@ find _site -iname "*.html" -type f -exec \
 find _site -iname "*.xml" -type f \
      -exec tidy -xml -q -m --tidy-mark false '{}' \;
 find _site/images/ -type f -regextype egrep -regex ".*(jpg|png)$" \
-     -exec echo cwebp -q 80 {} -o {}.webp \;
+     -exec cwebp -q 80 {} -o {}.webp \;
 
 rsync -aHP --delete _site/ root@goettinger-biergarten.de:/var/www/html
