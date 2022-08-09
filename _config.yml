@@ -11,3 +11,6 @@ url: "https://goettinger-biergarten.de"
 
 # Build settings
 markdown: kramdown
+
+# Misc. settings
+exclude: [ "LICENSE" ]
