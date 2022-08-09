@@ -16,19 +16,19 @@ server {
         internal;
     }
 
-
-    location ~* ^/images/.+\.(png|jpg)$ {
-        add_header Vary Accept;
-        try_files $uri$webp_suffix $uri =404;
-        expires 1y;
-    }
-
     location / {
-        try_files $uri $uri/ =404;
 
-        location ~* \.(css|js|ico|gif|jpeg|jpg|webp|png|svg|eot|otf|woff|woff2|ttf|ogg)$ {
+        location ~* ^/images/.+\.(png|jpg|jpeg)$ {
+            add_header Vary Accept;
+            try_files $uri$webp_suffix $uri =404;
             expires 1y;
         }
+
+        location ~* \.(css|js|ico|gif|webp|svg|eot|otf|woff|woff2|ttf|ogg)$ {
+            expires 1y;
+        }
+
+        try_files $uri $uri/ =404;
     }
 }
 
