@@ -11,11 +11,20 @@ server {
         internal;
     }
 
+    location ~* \/images\/\S+\.(jpeg|jpg|png)$ {
+        if ($http_accept ~* "webp") {
+            try_files $uri.webp =404;
+        } else {
+            try_files $uri =404;
+        }
+        expires 1y;
+    }
+
     location / {
         try_files $uri $uri/ =404;
 
         location ~* \.(css|js|ico|gif|jpeg|jpg|webp|png|svg|eot|otf|woff|woff2|ttf|ogg)$ {
-               expires 1y;
+            expires 1y;
         }
     }
 }
