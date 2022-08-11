@@ -15,3 +15,5 @@ find _site/images/ -type f -regextype egrep -regex ".*\.(png|jpe?g)$" \
      -exec cwebp -q 80 {} -o {}.webp \;
 
 rsync -aHP --delete _site/ root@goettinger-biergarten.de:/var/www/html
+
+jekyll clean
