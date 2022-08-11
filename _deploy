@@ -11,6 +11,8 @@ find _site -iname "*.html" -type f \
      -exec sed -i "s/--VERSION--/$VERSION/g" '{}' \;
 find _site -iname "*.xml" -type f \
      -exec tidy -xml -q -m --tidy-mark false '{}' \;
+find _site -iname "*.html" -type f \
+     -exec optipng {} \;
 find _site/images/ -type f -regextype egrep -regex ".*\.(png|jpe?g)$" \
      -exec cwebp -q 80 {} -o {}.webp \;
 
