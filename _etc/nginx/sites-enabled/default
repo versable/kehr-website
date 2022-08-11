@@ -1,8 +1,3 @@
-map $http_accept $webp_suffix {
-    default “”;
-    “~*webp” “.webp”;
-}
-
 server {
     listen 443 ssl http2;
     server_name goettinger-biergarten.de;
@@ -18,10 +13,10 @@ server {
 
     location / {
 
-        location ~* ^/images/.+\.(png|jpg|jpeg)$ {
+        location ~* ^/images/.+\.(png|jpe?g)$ {
+            expires 1y;
             add_header Vary Accept;
             try_files $uri$webp_suffix $uri =404;
-            expires 1y;
         }
 
         location ~* \.(css|js|ico|gif|webp|svg|eot|otf|woff|woff2|ttf|ogg)$ {
