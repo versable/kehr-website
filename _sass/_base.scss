@@ -150,7 +150,12 @@ nav {
         margin-left: 10px;
         text-align: center;
     }
-    .menu, .close { display: none; }
+    .menu, .close {
+        display: none;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 
     .link {
         padding: 20px 10px 0;
