@@ -10,6 +10,6 @@ including nginx config files and vector graphics for printing the menu.
 
 ## Philosophy
 
-The website does not use any javascript, uses custom CSS/SCSS and uses very
-little resources. Privacy is upheld by disabling all logs are disabled and
-cookies are not implemented.
+The website is generated in pure HTML without javascript, it uses custom
+CSS/SCSS. The goal is to provide a lean, efficient and secure website.
+Privacy is upheld by disabling all logs and cookies are not implemented.
