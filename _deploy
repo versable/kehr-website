@@ -17,6 +17,7 @@ find _site -iname "*.png" -type f \
      -exec optipng {} \;
 find _site/images/ -type f -regextype egrep -regex ".*\.(png|jpe?g)$" \
      -exec cwebp -q 80 {} -o {}.webp \;
+find _site -iname "*.svg" -type f -exec svgcleaner '{}' '{}' \;
 
 rsync -aHP --delete _site/ root@goettinger-biergarten.de:/var/www/html
 rsync -aHP --delete _etc/nginx/ root@goettinger-biergarten.de:/etc/nginx
