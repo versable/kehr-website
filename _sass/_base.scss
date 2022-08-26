@@ -17,7 +17,6 @@ html, body {
 
 body {
     margin: 0;
-    padding-top: 60px;
 }
 
 address {
@@ -133,7 +132,7 @@ h2[id] {
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 4;
