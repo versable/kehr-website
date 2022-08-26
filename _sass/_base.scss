@@ -188,6 +188,7 @@ nav {
 
 @include media-query-down($media-md) {
     nav {
+        position: fixed;
         top: 0;
         flex-flow: row wrap;
         padding: 0 10px;
