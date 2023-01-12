@@ -1,7 +1,7 @@
 # Göttinger Biergarten am Kehr
 
 The repository for the Göttinger Biergarten am Kehr website
-https://goettinger-biergarten.de/
+~~https://goettinger-biergarten.de/~~
 
 ## Content
 
